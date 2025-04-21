@@ -3,9 +3,9 @@
 #include"rpcprovider.h"
 #include"mprpcapplication.h"
 #include"friend.pb.h"
-#include"logger.h"
+// #include"logger.h"
 #include<vector>
-
+using namespace mprpc;
 class FriendService:public RPC::FriendServiceRpc
 {
 public:
@@ -41,11 +41,11 @@ public:
 
 int main(int argc,char **argv)
 {
-    LOG_INFO("first log message!");
-    LOG_ERR("%s:%s:%d",__FILE__,__FUNCTION__,__LINE__);
+    // LOG_INFO("first log message!");
+    // LOG_ERR("%s:%s:%d",__FILE__,__FUNCTION__,__LINE__);
 
     //先调用框架的初始化操作 provider -i config.conf，从init方法读取配置服务，比如IP地址和端口号
-    MprpcApplication::Init(argc,argv);
+     MprpcApplication::Init(argc,argv);
 
     //项目提供者，让我们可以发布该服务
     RpcProvider provider;

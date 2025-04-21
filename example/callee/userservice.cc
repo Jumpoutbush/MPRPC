@@ -5,9 +5,8 @@
 
 #include"rpcprovider.h"
 #include"mprpcapplication.h"
-#include"../user.pb.h"//包含protobuf头文件
-
-//using namespace RPC;
+#include"user.pb.h"//包含protobuf头文件
+using namespace mprpc;
 /*
 UserService原来是一个本地服务，提供了两个进程内的本地方法
 Login和GetFriendList
@@ -19,7 +18,7 @@ public:
     //登入系统的方法
     bool Login(std::string name,std::string pwd)
     {
-        std::cout<<"doing local service:Login"<<std::endl;
+        std::cout<<"doing Login verify service "<<std::endl;
         std::cout<<"name:"<<name<<" pwd"<<pwd<<std::endl;
         return true;
     }

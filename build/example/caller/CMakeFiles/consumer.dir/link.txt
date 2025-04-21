@@ -1,0 +1,1 @@
+/usr/bin/g++ -g -rdynamic CMakeFiles/consumer.dir/callfriendservice.cc.o CMakeFiles/consumer.dir/__/friend.pb.cc.o -o ../../../bin/consumer   -L/home/yyc/wkspace/MPRPC/lib  -Wl,-rpath,/home/yyc/wkspace/MPRPC/lib ../../../lib/libmprpc.so -lprotobuf 

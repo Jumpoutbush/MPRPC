@@ -1,60 +1,62 @@
-#include"mprpcapplication.h"
-#include<iostream>
-#include<unistd.h>
-#include<string>
+#include "mprpcapplication.h"
+// #include "rpcprovider.h"
 
+#include <unistd.h>
+#include <iostream>
+namespace mprpc{
 
 MprpcConfig MprpcApplication::m_config;
-//实现成全局的方法
-void ShowArgHelp()
+
+void ShowArgsHelp()
 {
-    std::cout<<"format:command -i <configfile>"<<std::endl;
+    std::cout << "<Usage> ./mprpcapp <rpc method> [args]" 
+    << "-i <config file>" << std::endl
+    << "-: get the help info" << std::endl
+    << std::endl;
 }
 void MprpcApplication::Init(int argc,char **argv)
 {
-    if(argc<2)//参数不足
-    {
-        ShowArgHelp();//打印参数的配置说明
+    if(argc < 2){   // 参数不足
+        ShowArgsHelp();
         exit(EXIT_FAILURE);
     }
-
-    //使用getopt读取参数
-    int c=0;
-    std::string config_file;//配置选项
-    while((c=getopt(argc,argv,"i:"))!=-1)
+    int c = 0;
+    std::string config_file;
+    while((c = getopt(argc, argv, "i:")) != -1)
     {
-        switch (c)
+        switch(c)
         {
-        case 'i'://指定选项
-            config_file=optarg;
-            break;
-        case '?'://出现了不想要的参数
-            std::cout<<"invalid args"<<std::endl;
-            ShowArgHelp();
-            exit(EXIT_FAILURE);
-        case ':':
-            std::cout<<"need <configfile>"<<std::endl;
-            ShowArgHelp();
-            exit(EXIT_FAILURE);
-        default:
-            break;
+            case 'i':
+                config_file = optarg;
+                break;
+            case '?':
+                std::cout << "invalid option: -" << (char)optopt << std::endl;
+                ShowArgsHelp();
+                exit(EXIT_FAILURE);
+                break;
+            case ':':
+                ShowArgsHelp();
+                exit(EXIT_FAILURE);
+                break;
+            default:
+                break;
         }
     }
-    //开始加载配置文件 加载IP，端口，zk的IP和端口
+
+    /**
+     * 初始化配置文件
+     * rpcserver_ip, rpcserver_port, zookeeper_ip, zookeeper_port
+     */ 
     m_config.LoadConfigFile(config_file.c_str());
-    // std::cout<<"rpcserverip:"<<m_config.Load("rpcserverip")<<std::endl;
-    // std::cout<<"rpcserverport:"<<m_config.Load("rpcserverport")<<std::endl;
-    // std::cout<<"zookeeperip:"<<m_config.Load("zookeeperip")<<std::endl;
-    // std::cout<<"zookeeperport:"<<m_config.Load("zookeeperport")<<std::endl;
-}
-MprpcApplication& MprpcApplication::GetInstance()
-{
-    static MprpcApplication app;
-    return app;
+    std::cout << "rpcserver ip: " << m_config.GetConfigValue("rpcserverip") << std::endl;
+    std::cout << "rpcserver port: " << m_config.GetConfigValue("rpcserverport") << std::endl;
+    std::cout << "zookeeper ip: " << m_config.GetConfigValue("zookeeperip") << std::endl;
+    std::cout << "zookeeper port: " << m_config.GetConfigValue("zookeeperport") << std::endl;
 }
 
-//获取配置项
 MprpcConfig& MprpcApplication::GetConfig()
 {
     return m_config;
+}
+
 }

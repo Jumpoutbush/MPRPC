@@ -1,18 +1,24 @@
 #pragma once
+#include "const.h"
+#include "mprpcconfig.h"
 
-#include"mprpcconfig.h"
-#include"mprpccontroller.h"
-#include"mprpcchannel.h"
-//mprpc框架的基础类，负责框架的一些初始化操作，使用单例模式设计
-class MprpcApplication
+namespace mprpc
 {
+// mprpc框架的基础类，负责框架的一些初始化操作，使用单例模式设计
+class MprpcApplication : public Singleton<MprpcApplication>, 
+    public std::enable_shared_from_this<MprpcApplication>
+{
+    friend class Singleton<MprpcApplication>;
 public:
+    ~MprpcApplication();
     static void Init(int argc,char **argv);
-    static MprpcApplication& GetInstance();
     static MprpcConfig& GetConfig();
 private:
-    static MprpcConfig m_config;
-    MprpcApplication(){};
+    MprpcApplication();
     MprpcApplication(const MprpcApplication&)=delete;
     MprpcApplication(MprpcApplication&&)=delete;
+
+    static MprpcConfig m_config;
 };
+
+}

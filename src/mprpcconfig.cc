@@ -1,77 +1,83 @@
 #include "mprpcconfig.h"
 
-#include <iostream>
-#include <string>
-//负责解析加载配置文件
-void MprpcConfig::LoadConfigFile(const char *config_file)
+namespace mprpc {
+
+MprpcConfig::MprpcConfig()
 {
-    FILE *pf = fopen(config_file, "r");
-    if (nullptr == pf)
-    {
-        std::cout << config_file << " is not exists" << std::endl;
+
+}
+
+MprpcConfig::~MprpcConfig()
+{
+
+}
+void MprpcConfig::LoadConfigFile(const char* filename)
+{
+    FILE *pf = fopen(filename, "r"); //以只读方式打开文件
+    if (pf == nullptr){
+        std::cout << filename << " config_file open failed" << std::endl;
         exit(EXIT_FAILURE);
     }
-
-    //文件读取成功
-    //1.注释 2.正确的配置项= 3.去掉开头的多余空格
-    while (!feof(pf))
-    {
-        char buff[512] = {0};
-        fgets(buff, 512, pf);
-
-        std::string read_buf(buff);
-        Trim(read_buf);
-
-        //判断注释：#
-        if (read_buf[0] == '#' || read_buf.empty())
-        {
-            continue;
+    // 处理：
+    // 注释符：#
+    // 正确的配置项 ：key = value
+    // 去掉开头多余的空格
+    while(!feof(pf)){
+        char buf[1024] = {0};
+        fgets(buf, 1024, pf);   // 读取一行
+        // 去掉开头多余的空格
+        std::string src_buf(buf);
+        Trim(src_buf);
+        // 判断是否为注释
+        if(src_buf[0] == '#' || src_buf.empty()){
+            continue; // 跳过这行
         }
-
-        //解析配置项
-        int idx = read_buf.find('=');
-        if (idx == -1)
-        {
-            //配置项不合法
-            continue;
+        // 判断是否为配置项
+        int idx = src_buf.find('=');
+        if(idx == std::string::npos){
+            continue; // 跳过这行
         }
-
-        //对配置项进行存储
-        std::string key;
-        std::string value;
-
-        key = read_buf.substr(0, idx);
+        std::string key = src_buf.substr(0, idx);
         Trim(key);
-
-        //查找回车符
-        int endidx=read_buf.find('\n',idx);
-        value = read_buf.substr(idx + 1, endidx - idx-1);
+        std::string value = src_buf.substr(idx + 1, src_buf.size() - idx);
         Trim(value);
-        m_configMap.insert({key, value});
+        // 去掉value两边的空格
+        idx = value.find_first_not_of(" \t\r\n") && value.find_first_not_of(' ');
+        if(idx != std::string::npos){
+            value = value.substr(idx, value.size() - idx);
+        }
+        idx = value.find_last_not_of(" \t\r\n") && value.find_first_not_of(' ');
+        if(idx != std::string::npos){
+            value = value.substr(idx, value.size() - idx);
+        }
+        // 将配置项存入map
+        m_configMap.insert(std::make_pair(key, value));
     }
 }
-//查询配置项信息
-std::string MprpcConfig::Load(std::string const &key)
+
+std::string MprpcConfig::GetConfigValue(const char* key)
 {
     auto it = m_configMap.find(key);
-    if (it == m_configMap.end())
-    {
+    if(it == m_configMap.end()){
         return "";
     }
     return it->second;
 }
-void MprpcConfig::Trim(std::string &src_buf)
+
+void MprpcConfig::Trim(std::string& src_buf)
 {
-    //去掉字符串前边多余的空格
-    int idx = src_buf.find_first_not_of(' ');
-    if (idx != -1)
-    {
-        //说明字符串前面有空格
+    if(src_buf.empty()){
+        return;
+    }
+    // 去掉前面多余的空格
+    int idx = src_buf.find_first_not_of("\t\r\n' '");
+    if(idx != std::string::npos){
         src_buf = src_buf.substr(idx, src_buf.size() - idx);
     }
-    idx = src_buf.find_last_not_of(' ');
-    if (idx != -1)
-    {
+    // 去掉后面多余的空格
+    idx = src_buf.find_last_not_of("\t\r\n' '");
+    if(idx != std::string::npos){
         src_buf = src_buf.substr(0, idx + 1);
     }
+}
 }
