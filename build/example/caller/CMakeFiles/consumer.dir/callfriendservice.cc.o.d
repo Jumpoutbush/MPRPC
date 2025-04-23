@@ -1,7 +1,6 @@
-src/CMakeFiles/mprpc.dir/rpcprovider.cc.o: \
- /home/yyc/wkspace/MPRPC/src/rpcprovider.cc /usr/include/stdc-predef.h \
- /home/yyc/wkspace/MPRPC/src/include/rpcprovider.h \
- /home/yyc/wkspace/MPRPC/src/include/const.h /usr/include/c++/11/iostream \
+example/caller/CMakeFiles/consumer.dir/callfriendservice.cc.o: \
+ /home/yyc/wkspace/MPRPC/example/caller/callfriendservice.cc \
+ /usr/include/stdc-predef.h /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -146,42 +145,53 @@ src/CMakeFiles/mprpc.dir/rpcprovider.cc.o: \
  /usr/include/c++/11/bits/locale_facets.tcc \
  /usr/include/c++/11/bits/basic_ios.tcc \
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
- /usr/include/c++/11/bits/istream.tcc /usr/include/c++/11/memory \
+ /usr/include/c++/11/bits/istream.tcc \
+ /home/yyc/wkspace/MPRPC/src/include/mprpcapplication.h \
+ /home/yyc/wkspace/MPRPC/src/include/const.h \
+ /usr/include/c++/11/condition_variable /usr/include/c++/11/chrono \
+ /usr/include/c++/11/ratio /usr/include/c++/11/limits \
+ /usr/include/c++/11/ctime /usr/include/c++/11/bits/parse_numbers.h \
+ /usr/include/c++/11/bits/std_mutex.h \
+ /usr/include/c++/11/bits/unique_lock.h \
+ /usr/include/c++/11/bits/shared_ptr.h \
+ /usr/include/c++/11/bits/shared_ptr_base.h \
+ /usr/include/c++/11/bits/allocated_ptr.h \
+ /usr/include/c++/11/bits/refwrap.h /usr/include/c++/11/bits/invoke.h \
+ /usr/include/c++/11/bits/unique_ptr.h /usr/include/c++/11/utility \
+ /usr/include/c++/11/bits/stl_relops.h /usr/include/c++/11/tuple \
+ /usr/include/c++/11/array /usr/include/c++/11/bits/uses_allocator.h \
+ /usr/include/c++/11/ext/aligned_buffer.h \
+ /usr/include/c++/11/ext/concurrence.h /usr/include/c++/11/memory \
  /usr/include/c++/11/bits/stl_uninitialized.h \
  /usr/include/c++/11/bits/stl_tempbuf.h \
  /usr/include/c++/11/bits/stl_raw_storage_iter.h \
  /usr/include/c++/11/bits/align.h /usr/include/c++/11/bit \
- /usr/include/c++/11/bits/uses_allocator.h \
- /usr/include/c++/11/bits/unique_ptr.h /usr/include/c++/11/utility \
- /usr/include/c++/11/bits/stl_relops.h /usr/include/c++/11/tuple \
- /usr/include/c++/11/array /usr/include/c++/11/bits/invoke.h \
- /usr/include/c++/11/bits/shared_ptr.h \
- /usr/include/c++/11/bits/shared_ptr_base.h \
- /usr/include/c++/11/bits/allocated_ptr.h \
- /usr/include/c++/11/bits/refwrap.h \
- /usr/include/c++/11/ext/aligned_buffer.h \
- /usr/include/c++/11/ext/concurrence.h \
  /usr/include/c++/11/bits/shared_ptr_atomic.h \
  /usr/include/c++/11/bits/atomic_base.h \
  /usr/include/c++/11/bits/atomic_lockfree_defines.h \
  /usr/include/c++/11/backward/auto_ptr.h \
  /usr/include/c++/11/pstl/glue_memory_defs.h \
- /usr/include/c++/11/pstl/execution_defs.h \
- /home/yyc/wkspace/MPRPC/src/include/singleton.h \
- /usr/include/c++/11/mutex /usr/include/c++/11/chrono \
- /usr/include/c++/11/ratio /usr/include/c++/11/limits \
- /usr/include/c++/11/ctime /usr/include/c++/11/bits/parse_numbers.h \
- /usr/include/c++/11/bits/std_mutex.h \
- /usr/include/c++/11/bits/unique_lock.h \
- /usr/local/include/google/protobuf/service.h \
- /usr/local/include/google/protobuf/stubs/callback.h \
- /usr/local/include/google/protobuf/stubs/macros.h \
- /usr/local/include/google/protobuf/stubs/port.h /usr/include/assert.h \
- /usr/include/c++/11/stdlib.h /usr/include/c++/11/cstddef \
- /usr/include/string.h /usr/include/strings.h \
- /usr/local/include/google/protobuf/stubs/platform_macros.h \
+ /usr/include/c++/11/pstl/execution_defs.h /usr/include/c++/11/mutex \
+ /usr/include/c++/11/queue /usr/include/c++/11/deque \
+ /usr/include/c++/11/bits/stl_deque.h /usr/include/c++/11/bits/deque.tcc \
+ /usr/include/c++/11/vector /usr/include/c++/11/bits/stl_vector.h \
+ /usr/include/c++/11/bits/stl_bvector.h \
+ /usr/include/c++/11/bits/vector.tcc /usr/include/c++/11/bits/stl_heap.h \
+ /usr/include/c++/11/bits/stl_queue.h /usr/include/c++/11/semaphore \
+ /usr/include/c++/11/thread /usr/include/c++/11/bits/std_thread.h \
+ /usr/include/c++/11/bits/this_thread_sleep.h \
+ /usr/include/c++/11/unordered_map /usr/include/c++/11/bits/hashtable.h \
+ /usr/include/c++/11/bits/hashtable_policy.h \
+ /usr/include/c++/11/bits/enable_special_members.h \
+ /usr/include/c++/11/bits/node_handle.h \
+ /usr/include/c++/11/bits/unordered_map.h \
+ /usr/include/c++/11/bits/erase_if.h \
+ /home/yyc/wkspace/MPRPC/src/include/rpcheader.pb.h \
  /usr/local/include/google/protobuf/port_def.inc \
- /usr/include/x86_64-linux-gnu/sys/param.h \
+ /usr/local/include/google/protobuf/port_undef.inc \
+ /usr/local/include/google/protobuf/io/coded_stream.h \
+ /usr/include/assert.h /usr/include/c++/11/atomic \
+ /usr/include/c++/11/climits \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h \
  /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
@@ -189,7 +199,9 @@ src/CMakeFiles/mprpc.dir/rpcprovider.cc.o: \
  /usr/include/linux/limits.h \
  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
- /usr/include/x86_64-linux-gnu/bits/uio_lim.h /usr/include/signal.h \
+ /usr/include/x86_64-linux-gnu/bits/uio_lim.h /usr/include/c++/11/cstddef \
+ /usr/include/c++/11/cstring /usr/include/string.h /usr/include/strings.h \
+ /usr/include/x86_64-linux-gnu/sys/param.h /usr/include/signal.h \
  /usr/include/x86_64-linux-gnu/bits/signum-generic.h \
  /usr/include/x86_64-linux-gnu/bits/signum-arch.h \
  /usr/include/x86_64-linux-gnu/bits/types/sig_atomic_t.h \
@@ -220,55 +232,71 @@ src/CMakeFiles/mprpc.dir/rpcprovider.cc.o: \
  /usr/include/x86_64-linux-gnu/bits/signal_ext.h \
  /usr/include/x86_64-linux-gnu/bits/param.h /usr/include/linux/param.h \
  /usr/include/x86_64-linux-gnu/asm/param.h \
- /usr/include/asm-generic/param.h /usr/include/byteswap.h \
- /usr/local/include/google/protobuf/port_undef.inc \
+ /usr/include/asm-generic/param.h \
  /usr/local/include/google/protobuf/stubs/common.h \
  /usr/include/c++/11/algorithm /usr/include/c++/11/bits/stl_algo.h \
  /usr/include/c++/11/bits/algorithmfwd.h \
- /usr/include/c++/11/bits/stl_heap.h \
  /usr/include/c++/11/bits/uniform_int_dist.h \
  /usr/include/c++/11/pstl/glue_algorithm_defs.h \
  /usr/include/c++/11/functional /usr/include/c++/11/bits/std_function.h \
- /usr/include/c++/11/unordered_map /usr/include/c++/11/bits/hashtable.h \
- /usr/include/c++/11/bits/hashtable_policy.h \
- /usr/include/c++/11/bits/enable_special_members.h \
- /usr/include/c++/11/bits/node_handle.h \
- /usr/include/c++/11/bits/unordered_map.h \
- /usr/include/c++/11/bits/erase_if.h /usr/include/c++/11/vector \
- /usr/include/c++/11/bits/stl_vector.h \
- /usr/include/c++/11/bits/stl_bvector.h \
- /usr/include/c++/11/bits/vector.tcc /usr/include/c++/11/map \
- /usr/include/c++/11/bits/stl_tree.h /usr/include/c++/11/bits/stl_map.h \
+ /usr/include/c++/11/map /usr/include/c++/11/bits/stl_tree.h \
+ /usr/include/c++/11/bits/stl_map.h \
  /usr/include/c++/11/bits/stl_multimap.h /usr/include/c++/11/set \
  /usr/include/c++/11/bits/stl_set.h \
  /usr/include/c++/11/bits/stl_multiset.h \
- /home/yyc/wkspace/MPRPC/src/include/mprpcapplication.h \
- /home/yyc/wkspace/MPRPC/src/include/mprpcconfig.h \
- /usr/local/include/muduo/net/TcpServer.h \
- /usr/local/include/muduo/base/Atomic.h \
- /usr/local/include/muduo/base/noncopyable.h \
- /usr/local/include/muduo/base/Types.h \
- /usr/local/include/muduo/net/TcpConnection.h \
- /usr/local/include/muduo/base/StringPiece.h \
- /usr/local/include/muduo/net/Callbacks.h \
- /usr/local/include/muduo/base/Timestamp.h \
- /usr/local/include/muduo/base/copyable.h \
- /usr/local/include/boost/operators.hpp /usr/include/c++/11/iterator \
+ /usr/local/include/google/protobuf/stubs/port.h \
+ /usr/include/c++/11/stdlib.h \
+ /usr/local/include/google/protobuf/stubs/platform_macros.h \
+ /usr/include/byteswap.h \
+ /usr/local/include/google/protobuf/stubs/macros.h \
+ /usr/local/include/google/protobuf/stubs/logging.h \
+ /usr/local/include/google/protobuf/stubs/strutil.h \
+ /usr/local/include/google/protobuf/stubs/stringpiece.h \
+ /usr/local/include/google/protobuf/stubs/hash.h \
+ /usr/include/c++/11/unordered_set \
+ /usr/include/c++/11/bits/unordered_set.h \
+ /usr/local/include/google/protobuf/port.h \
+ /usr/local/include/google/protobuf/arena.h \
+ /usr/local/include/google/protobuf/arena_impl.h \
+ /usr/local/include/google/protobuf/arenastring.h \
+ /usr/local/include/google/protobuf/stubs/fastmem.h \
+ /usr/local/include/google/protobuf/generated_message_table_driven.h \
+ /usr/local/include/google/protobuf/map.h /usr/include/c++/11/iterator \
  /usr/include/c++/11/bits/stream_iterator.h \
- /usr/local/include/boost/config.hpp \
- /usr/local/include/boost/config/user.hpp \
- /usr/local/include/boost/config/select_compiler_config.hpp \
- /usr/local/include/boost/config/compiler/gcc.hpp \
- /usr/local/include/boost/config/select_stdlib_config.hpp \
- /usr/local/include/boost/config/stdlib/libstdcpp3.hpp \
- /usr/local/include/boost/config/select_platform_config.hpp \
- /usr/local/include/boost/config/platform/linux.hpp \
- /usr/local/include/boost/config/posix_features.hpp \
- /usr/local/include/boost/config/suffix.hpp \
- /usr/local/include/boost/detail/workaround.hpp \
- /usr/local/include/muduo/net/Buffer.h \
- /usr/local/include/muduo/net/Endian.h \
- /usr/local/include/muduo/net/InetAddress.h /usr/include/netinet/in.h \
+ /usr/local/include/google/protobuf/generated_enum_util.h \
+ /usr/local/include/google/protobuf/message_lite.h \
+ /usr/local/include/google/protobuf/metadata_lite.h \
+ /usr/local/include/google/protobuf/stubs/once.h \
+ /usr/local/include/google/protobuf/map_type_handler.h \
+ /usr/local/include/google/protobuf/parse_context.h \
+ /usr/local/include/google/protobuf/io/zero_copy_stream.h \
+ /usr/local/include/google/protobuf/implicit_weak_message.h \
+ /usr/local/include/google/protobuf/repeated_field.h \
+ /usr/local/include/google/protobuf/stubs/casts.h \
+ /usr/local/include/google/protobuf/wire_format_lite.h \
+ /usr/local/include/google/protobuf/map_entry_lite.h \
+ /usr/local/include/google/protobuf/generated_message_util.h \
+ /usr/local/include/google/protobuf/any.h \
+ /usr/local/include/google/protobuf/has_bits.h \
+ /usr/local/include/google/protobuf/map_field_lite.h \
+ /usr/local/include/google/protobuf/inlined_string_field.h \
+ /usr/local/include/google/protobuf/generated_message_reflection.h \
+ /usr/local/include/google/protobuf/descriptor.h \
+ /usr/local/include/google/protobuf/stubs/mutex.h \
+ /usr/local/include/google/protobuf/generated_enum_reflection.h \
+ /usr/local/include/google/protobuf/unknown_field_set.h \
+ /usr/local/include/google/protobuf/io/zero_copy_stream_impl_lite.h \
+ /usr/local/include/google/protobuf/stubs/callback.h \
+ /usr/local/include/google/protobuf/stubs/stl_util.h \
+ /usr/local/include/google/protobuf/message.h \
+ /usr/local/include/google/protobuf/extension_set.h \
+ /usr/include/c++/11/cassert \
+ /home/yyc/wkspace/MPRPC/src/include/singleton.h \
+ /home/yyc/wkspace/MPRPC/src/include/mprpcconfig.h \
+ /home/yyc/wkspace/MPRPC/src/include/mprpcchannel.h \
+ /home/yyc/wkspace/MPRPC/src/include/zookeeperutil.h \
+ /usr/include/semaphore.h /usr/include/x86_64-linux-gnu/bits/semaphore.h \
+ /usr/include/zookeeper/zookeeper.h \
  /usr/include/x86_64-linux-gnu/sys/socket.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
  /usr/include/x86_64-linux-gnu/bits/socket.h \
@@ -285,127 +313,11 @@ src/CMakeFiles/mprpc.dir/rpcprovider.cc.o: \
  /usr/include/x86_64-linux-gnu/asm/sockios.h \
  /usr/include/asm-generic/sockios.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_osockaddr.h \
- /usr/include/x86_64-linux-gnu/bits/in.h /usr/local/include/boost/any.hpp \
- /usr/local/include/boost/type_index.hpp \
- /usr/local/include/boost/type_index/stl_type_index.hpp \
- /usr/local/include/boost/type_index/type_index_facade.hpp \
- /usr/include/c++/11/cstring /usr/local/include/boost/static_assert.hpp \
- /usr/local/include/boost/throw_exception.hpp \
- /usr/local/include/boost/exception/exception.hpp \
- /usr/local/include/boost/current_function.hpp \
- /usr/local/include/boost/core/demangle.hpp /usr/include/c++/11/cxxabi.h \
- /usr/include/x86_64-linux-gnu/c++/11/bits/cxxabi_tweaks.h \
- /usr/local/include/boost/type_traits/is_const.hpp \
- /usr/local/include/boost/type_traits/integral_constant.hpp \
- /usr/local/include/boost/type_traits/is_reference.hpp \
- /usr/local/include/boost/type_traits/is_lvalue_reference.hpp \
- /usr/local/include/boost/type_traits/is_rvalue_reference.hpp \
- /usr/local/include/boost/type_traits/is_volatile.hpp \
- /usr/local/include/boost/type_traits/remove_cv.hpp \
- /usr/local/include/boost/type_traits/remove_reference.hpp \
- /usr/local/include/boost/mpl/if.hpp \
- /usr/local/include/boost/mpl/aux_/value_wknd.hpp \
- /usr/local/include/boost/mpl/aux_/static_cast.hpp \
- /usr/local/include/boost/mpl/aux_/config/workaround.hpp \
- /usr/local/include/boost/mpl/aux_/config/integral.hpp \
- /usr/local/include/boost/mpl/aux_/config/msvc.hpp \
- /usr/local/include/boost/mpl/aux_/config/eti.hpp \
- /usr/local/include/boost/mpl/aux_/na_spec.hpp \
- /usr/local/include/boost/mpl/lambda_fwd.hpp \
- /usr/local/include/boost/mpl/void_fwd.hpp \
- /usr/local/include/boost/mpl/aux_/adl_barrier.hpp \
- /usr/local/include/boost/mpl/aux_/config/adl.hpp \
- /usr/local/include/boost/mpl/aux_/config/intel.hpp \
- /usr/local/include/boost/mpl/aux_/config/gcc.hpp \
- /usr/local/include/boost/mpl/aux_/na.hpp \
- /usr/local/include/boost/mpl/bool.hpp \
- /usr/local/include/boost/mpl/bool_fwd.hpp \
- /usr/local/include/boost/mpl/integral_c_tag.hpp \
- /usr/local/include/boost/mpl/aux_/config/static_constant.hpp \
- /usr/local/include/boost/mpl/aux_/na_fwd.hpp \
- /usr/local/include/boost/mpl/aux_/config/ctps.hpp \
- /usr/local/include/boost/mpl/aux_/config/lambda.hpp \
- /usr/local/include/boost/mpl/aux_/config/ttp.hpp \
- /usr/local/include/boost/mpl/int.hpp \
- /usr/local/include/boost/mpl/int_fwd.hpp \
- /usr/local/include/boost/mpl/aux_/nttp_decl.hpp \
- /usr/local/include/boost/mpl/aux_/config/nttp.hpp \
- /usr/local/include/boost/mpl/aux_/integral_wrapper.hpp \
- /usr/local/include/boost/preprocessor/cat.hpp \
- /usr/local/include/boost/preprocessor/config/config.hpp \
- /usr/local/include/boost/mpl/aux_/lambda_arity_param.hpp \
- /usr/local/include/boost/mpl/aux_/template_arity_fwd.hpp \
- /usr/local/include/boost/mpl/aux_/arity.hpp \
- /usr/local/include/boost/mpl/aux_/config/dtp.hpp \
- /usr/local/include/boost/mpl/aux_/preprocessor/params.hpp \
- /usr/local/include/boost/mpl/aux_/config/preprocessor.hpp \
- /usr/local/include/boost/preprocessor/comma_if.hpp \
- /usr/local/include/boost/preprocessor/punctuation/comma_if.hpp \
- /usr/local/include/boost/preprocessor/control/if.hpp \
- /usr/local/include/boost/preprocessor/control/iif.hpp \
- /usr/local/include/boost/preprocessor/logical/bool.hpp \
- /usr/local/include/boost/preprocessor/facilities/empty.hpp \
- /usr/local/include/boost/preprocessor/punctuation/comma.hpp \
- /usr/local/include/boost/preprocessor/repeat.hpp \
- /usr/local/include/boost/preprocessor/repetition/repeat.hpp \
- /usr/local/include/boost/preprocessor/debug/error.hpp \
- /usr/local/include/boost/preprocessor/detail/auto_rec.hpp \
- /usr/local/include/boost/preprocessor/tuple/eat.hpp \
- /usr/local/include/boost/preprocessor/inc.hpp \
- /usr/local/include/boost/preprocessor/arithmetic/inc.hpp \
- /usr/local/include/boost/mpl/aux_/preprocessor/enum.hpp \
- /usr/local/include/boost/mpl/aux_/preprocessor/def_params_tail.hpp \
- /usr/local/include/boost/mpl/limits/arity.hpp \
- /usr/local/include/boost/preprocessor/logical/and.hpp \
- /usr/local/include/boost/preprocessor/logical/bitand.hpp \
- /usr/local/include/boost/preprocessor/identity.hpp \
- /usr/local/include/boost/preprocessor/facilities/identity.hpp \
- /usr/local/include/boost/preprocessor/empty.hpp \
- /usr/local/include/boost/preprocessor/arithmetic/add.hpp \
- /usr/local/include/boost/preprocessor/arithmetic/dec.hpp \
- /usr/local/include/boost/preprocessor/control/while.hpp \
- /usr/local/include/boost/preprocessor/list/fold_left.hpp \
- /usr/local/include/boost/preprocessor/list/detail/fold_left.hpp \
- /usr/local/include/boost/preprocessor/control/expr_iif.hpp \
- /usr/local/include/boost/preprocessor/list/adt.hpp \
- /usr/local/include/boost/preprocessor/detail/is_binary.hpp \
- /usr/local/include/boost/preprocessor/detail/check.hpp \
- /usr/local/include/boost/preprocessor/logical/compl.hpp \
- /usr/local/include/boost/preprocessor/list/fold_right.hpp \
- /usr/local/include/boost/preprocessor/list/detail/fold_right.hpp \
- /usr/local/include/boost/preprocessor/list/reverse.hpp \
- /usr/local/include/boost/preprocessor/control/detail/while.hpp \
- /usr/local/include/boost/preprocessor/tuple/elem.hpp \
- /usr/local/include/boost/preprocessor/facilities/expand.hpp \
- /usr/local/include/boost/preprocessor/facilities/overload.hpp \
- /usr/local/include/boost/preprocessor/variadic/size.hpp \
- /usr/local/include/boost/preprocessor/tuple/rem.hpp \
- /usr/local/include/boost/preprocessor/tuple/detail/is_single_return.hpp \
- /usr/local/include/boost/preprocessor/variadic/elem.hpp \
- /usr/local/include/boost/preprocessor/arithmetic/sub.hpp \
- /usr/local/include/boost/mpl/aux_/config/overload_resolution.hpp \
- /usr/local/include/boost/mpl/aux_/lambda_support.hpp \
- /usr/local/include/boost/mpl/or.hpp \
- /usr/local/include/boost/mpl/aux_/config/use_preprocessed.hpp \
- /usr/local/include/boost/mpl/aux_/nested_type_wknd.hpp \
- /usr/local/include/boost/mpl/aux_/include_preprocessed.hpp \
- /usr/local/include/boost/mpl/aux_/config/compiler.hpp \
- /usr/local/include/boost/preprocessor/stringize.hpp \
- /usr/local/include/boost/mpl/aux_/preprocessed/gcc/or.hpp \
- /usr/local/include/boost/type_traits/decay.hpp \
- /usr/local/include/boost/type_traits/is_array.hpp \
- /usr/local/include/boost/type_traits/is_function.hpp \
- /usr/local/include/boost/type_traits/detail/config.hpp \
- /usr/local/include/boost/version.hpp \
- /usr/local/include/boost/type_traits/detail/is_function_ptr_helper.hpp \
- /usr/local/include/boost/type_traits/remove_bounds.hpp \
- /usr/local/include/boost/type_traits/remove_extent.hpp \
- /usr/local/include/boost/type_traits/add_pointer.hpp \
- /usr/local/include/boost/type_traits/add_reference.hpp \
- /usr/local/include/boost/utility/enable_if.hpp \
- /usr/local/include/boost/core/enable_if.hpp \
- /usr/local/include/boost/type_traits/is_same.hpp \
- /usr/local/include/muduo/net/EventLoop.h /usr/include/c++/11/atomic \
- /usr/local/include/muduo/base/Mutex.h \
- /usr/local/include/muduo/base/CurrentThread.h \
- /usr/local/include/muduo/net/TimerId.h
+ /usr/include/x86_64-linux-gnu/sys/time.h /usr/include/zookeeper/proto.h \
+ /usr/include/zookeeper/zookeeper_version.h \
+ /usr/include/zookeeper/recordio.h \
+ /usr/include/zookeeper/zookeeper.jute.h /usr/include/arpa/inet.h \
+ /usr/include/netinet/in.h /usr/include/x86_64-linux-gnu/bits/in.h \
+ /usr/local/include/google/protobuf/service.h \
+ /home/yyc/wkspace/MPRPC/src/include/mprpccontroller.h \
+ /home/yyc/wkspace/MPRPC/example/friend.pb.h

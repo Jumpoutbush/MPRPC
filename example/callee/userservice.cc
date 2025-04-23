@@ -1,11 +1,10 @@
 //本地服务发布成RPC服务的方法
-
 #include<iostream>
 #include<string>
 
 #include"rpcprovider.h"
 #include"mprpcapplication.h"
-#include"user.pb.h"//包含protobuf头文件
+#include"user.pb.h"
 using namespace mprpc;
 /*
 UserService原来是一个本地服务，提供了两个进程内的本地方法
@@ -44,8 +43,8 @@ public:
         bool ret=Register(id,name,pwd);
 
         //填充回调结果
-        response->mutable_result()->set_errcode(0);
-        response->mutable_result()->set_errmsg("");
+        response->mutable_result()->set_errcode(1);
+        response->mutable_result()->set_errmsg("regisiter success");
         response->set_success(ret);
 
         done->Run();
@@ -74,8 +73,8 @@ public:
 
         //把响应写入,包括错误码，错误信息和运行结果
         RPC::ResultCode *Code=response->mutable_reslut();
-        Code->set_errcode(1);
-        Code->set_errmsg("Login do error!");
+        Code->set_errcode(1);   // 可在const.h中统一定义错误码
+        Code->set_errmsg("Login do success!");
         response->set_success(loginresult);
 
         //执行回调操作  执行响应对象数据的序列化和网络发送

@@ -5,7 +5,6 @@
 #include <iostream>
 namespace mprpc{
 
-MprpcConfig MprpcApplication::m_config;
 
 void ShowArgsHelp()
 {
@@ -47,16 +46,16 @@ void MprpcApplication::Init(int argc,char **argv)
      * 初始化配置文件
      * rpcserver_ip, rpcserver_port, zookeeper_ip, zookeeper_port
      */ 
-    m_config.LoadConfigFile(config_file.c_str());
-    std::cout << "rpcserver ip: " << m_config.GetConfigValue("rpcserverip") << std::endl;
-    std::cout << "rpcserver port: " << m_config.GetConfigValue("rpcserverport") << std::endl;
-    std::cout << "zookeeper ip: " << m_config.GetConfigValue("zookeeperip") << std::endl;
-    std::cout << "zookeeper port: " << m_config.GetConfigValue("zookeeperport") << std::endl;
+    MprpcConfig::GetInstance()->LoadConfigFile(config_file.c_str());
+    std::cout << "rpcserver ip: " << MprpcConfig::GetInstance()->GetConfigValue("rpcserverip") << std::endl;
+    std::cout << "rpcserver port: " << MprpcConfig::GetInstance()->GetConfigValue("rpcserverport") << std::endl;
+    std::cout << "zookeeper ip: " << MprpcConfig::GetInstance()->GetConfigValue("zookeeperip") << std::endl;
+    std::cout << "zookeeper port: " << MprpcConfig::GetInstance()->GetConfigValue("zookeeperport") << std::endl;
 }
 
-MprpcConfig& MprpcApplication::GetConfig()
-{
-    return m_config;
-}
+// MprpcConfig& MprpcApplication::GetConfig()
+// {
+//     return m_config;
+// }
 
 }

@@ -2,7 +2,9 @@
 #include "const.h"
 #include "google/protobuf/service.h"
 #include "mprpcapplication.h"
+#include "zookeeperutil.h"
 
+#include <google/protobuf/descriptor.h>
 #include <muduo/net/TcpServer.h>
 #include <muduo/net/EventLoop.h>
 #include <muduo/net/InetAddress.h>
@@ -24,14 +26,25 @@ public:
      */
     void Run();
 private:
+    // 事件循环
+    muduo::net::EventLoop m_eventloop; 
+
+    // 服务类型信息
+    struct ServiceInfo
+    {
+        google::protobuf::Service *m_service;   // 服务对象
+        std::unordered_map<std::string, const google::protobuf::MethodDescriptor*> m_methodMap; // <方法名，方法描述>
+    };
+    std::unordered_map<std::string, ServiceInfo> m_servicesMap; // 注册成果的<服务名，服务信息>
+
+    // tcpserver
     // 新的socket连接回调
     void OnConnection(const muduo::net::TcpConnectionPtr &conn);
     // 接收到新的rpc请求消息
     void OnMessage(const muduo::net::TcpConnectionPtr &conn, 
                 muduo::net::Buffer *buf, muduo::Timestamp time);
-
-    // 事件循环
-    muduo::net::EventLoop m_eventloop; 
+    // Closure回调
+    void SendRpcResponse(const muduo::net::TcpConnectionPtr&, google::protobuf::Message* response);
 };
 
 }

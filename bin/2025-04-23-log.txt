@@ -1,0 +1,10 @@
+20:12:19 =>[error] FriendService Start!
+20:12:19 =>[error] /home/yyc/wkspace/MPRPC/example/callee/friendservice.cc:main:46 test_error_message
+20:12:19 =>[info] userid=1000
+21:29:40 =>[error] FriendService Start!
+21:29:40 =>[error] /home/yyc/wkspace/MPRPC/example/callee/friendservice.cc:main:46 test_error_message
+21:29:40 =>[info] userid=1000
+21:29:45 =>[info] userid=1000
+21:36:09 =>[error] FriendService Start!
+21:36:09 =>[error] /home/yyc/wkspace/MPRPC/example/callee/friendservice.cc:main:46 test_error_message
+21:36:09 =>[info] userid=1000

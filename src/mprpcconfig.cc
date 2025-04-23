@@ -2,11 +2,6 @@
 
 namespace mprpc {
 
-MprpcConfig::MprpcConfig()
-{
-
-}
-
 MprpcConfig::~MprpcConfig()
 {
 
